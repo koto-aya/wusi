@@ -1,0 +1,127 @@
+{
+  "name": "template-demo",
+  "description": "示例模板",
+  "basePackage": "com.kotoaya",
+  "author": "kotoaya",
+  "version": "1.0",
+  "createTime": "2024-05-03",
+  "fileConfig": {
+    "inputRootPath": "E:/project/wusi",
+    "outputRootPath": "wusi",
+    "type": "dir",
+    "files": [
+      {
+        "inputPath": "src/main/resources/java/common/utils/TxtUtil.java.ftl",
+        "outputPath": "src/main/java/com/kotoaya/common/utils/TxtUtil.java",
+        "type": "file",
+        "generator": "dynamic"
+      },{
+        "inputPath": "src/main/resources/java/generator/MainGenerator.java.ftl",
+        "outputPath": "src/main/java/com/kotoaya/generator/MainGenerator.java",
+        "type": "file",
+        "generator": "dynamic"
+      }, {
+        "inputPath": "src/main/resources/java/generator/DynamicGenerator.java.ftl",
+        "outputPath": "src/main/java/com/kotoaya/generator/DynamicGenerator.java",
+        "type": "file",
+        "generator": "dynamic"
+      }, {
+        "inputPath": "src/main/resources/java/generator/StaticGenerator.java.ftl",
+        "outputPath": "src/main/java/com/kotoaya/generator/StaticGenerator.java",
+        "type": "file",
+        "generator": "dynamic"
+      },{
+        "inputPath": ".gitignore",
+        "outputPath": ".gitignore",
+        "type": "file",
+        "generator": "static"
+      },{
+        "inputPath": "README.md",
+        "outputPath": "README.md",
+        "type": "file",
+        "generator": "static"
+      },{
+        "inputPath": "src/main/resources",
+        "outputPath": "src/main/resources",
+        "type": "dir",
+        "generator": "static"
+      },{
+        "inputPath": ".idea",
+        "outputPath": ".idea",
+        "type": "dir",
+        "generator": "static"
+      },{
+        "inputPath": "src/main/resources/java/pom.xml.ftl",
+        "outputPath": "pom.xml",
+        "type": "file",
+        "generator": "dynamic"
+      },{
+        "inputPath": "src/main/resources/java/meta/Meta.java.ftl",
+        "outputPath": "src/main/java/com/kotoaya/meta/Meta.java",
+        "type": "file",
+        "generator": "dynamic"
+      },{
+        "inputPath": "src/main/resources/java/meta/MetaManager.java.ftl",
+        "outputPath": "src/main/java/com/kotoaya/meta/MetaManager.java",
+        "type": "file",
+        "generator": "dynamic"
+      },{
+        "inputPath": "src/main/resources/java/subCommand/SubjectCommand.java.ftl",
+        "outputPath": "src/main/java/com/kotoaya/subCommand/SubjectCommand.java",
+        "type": "file",
+        "generator": "dynamic"
+      },{
+        "inputPath": "src/main/resources/java/subCommand/AnswerCommand.java.ftl",
+        "outputPath": "src/main/java/com/kotoaya/subCommand/AnswerCommand.java",
+        "type": "file",
+        "generator": "dynamic"
+      },{
+        "inputPath": "src/main/resources/java/subCommand/IntroductionCommand.java.ftl",
+        "outputPath": "src/main/java/com/kotoaya/subCommand/IntroductionCommand.java",
+        "type": "file",
+        "generator": "dynamic"
+      },{
+        "inputPath": "src/main/resources/java/subCommand/TestCommand.java.ftl",
+        "outputPath": "src/main/java/com/kotoaya/subCommand/TestCommand.java",
+        "type": "file",
+        "generator": "dynamic"
+      },{
+        "inputPath": "src/main/resources/java/WusiExecutor.java.ftl",
+        "outputPath": "src/main/java/com/kotoaya/WusiExecutor.java",
+        "type": "file",
+        "generator": "dynamic"
+      },{
+        "inputPath": "src/main/resources/java/WusiApplication.java.ftl",
+        "outputPath": "src/main/java/com/kotoaya/WusiApplication.java",
+        "type": "file",
+        "generator": "dynamic"
+      }
+    ]
+  },
+  "modelConfig": {
+    "models": [
+      {
+        "fieldName": "context",
+        "fieldType": "String",
+        "defaultValue": "",
+        "description": "自定义主题",
+        "prompt": "",
+        "addr": "s"
+      },{
+        "fieldName": "foreColor",
+        "fieldType": "String",
+        "defaultValue": "31",
+        "description": "前景色",
+        "prompt": "可选值31-36:",
+        "addr": "c"
+      },{
+        "fieldName": "refreshInterval",
+        "fieldType": "int",
+        "defaultValue": "1",
+        "description": "刷新间隔",
+        "prompt": "输入正整数:",
+        "addr": "t"
+      }
+    ]
+  }
+}

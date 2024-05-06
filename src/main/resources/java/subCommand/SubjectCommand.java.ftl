@@ -1,25 +1,27 @@
-package com.kotoaya.wusi.subCommand;
+package ${basePackage}.subCommand;
 
 import cn.hutool.core.io.resource.ClassPathResource;
-import com.kotoaya.wusi.common.WusiException;
-import com.kotoaya.wusi.common.utils.TxtUtil;
+import ${basePackage}.common.WusiException;
+import ${basePackage}.common.utils.TxtUtil;
 import picocli.CommandLine;
 
-import java.io.*;
+import java.io.BufferedWriter;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.io.PrintWriter;
 
 /**
  * 主题子命令
+<#if author??> * @author ${author}</#if>
  */
 @CommandLine.Command(name = "subject",description = "显示主题",mixinStandardHelpOptions = true)
 public class SubjectCommand implements Runnable{
+<#list modelConfig.models as modelInfo>
     //自定义主题
-    @CommandLine.Option(names = {"-s"},description = "自定义主题",arity = "0..1",interactive = true, echo = true)
-    private String context="";
-    @CommandLine.Option(names = {"-c"},description = "前景色",arity = "0..1",interactive = true, prompt = "可选值31-36:",echo = true)
-    private String foreColor="31";
+    @CommandLine.Option(names = {"${modelInfo.addr}"},description = "${modelInfo.description}",arity = "0..1",interactive = true, echo = true<#if prompt??>,prompt="${modelInfo.prompt}"</#if>)
+    private ${modelInfo.fieldType} ${modelInfo.fieldName}="${modelInfo.defaultValue}";
+</#list>
 
-    @CommandLine.Option(names = "-t",description = "刷新间隔",arity = "0..1",interactive = true,prompt = "输入正整数",echo = true)
-    private int refreshInterval=1;
 
     //打印主题
     public void printSubject(){

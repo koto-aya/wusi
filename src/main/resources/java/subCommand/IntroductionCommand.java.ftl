@@ -1,13 +1,16 @@
-package com.kotoaya.wusi.subCommand;
+package ${basePackage}.subCommand;
 
 import cn.hutool.core.io.resource.ClassPathResource;
-import com.kotoaya.wusi.common.WusiException;
+import ${basePackage}.common.WusiException;
 import picocli.CommandLine;
 
-import java.io.*;
+import java.io.BufferedReader;
+import java.io.InputStream;
+import java.io.InputStreamReader;
 
 /**
  * 五四青年节介绍
+<#if author??> * @author ${author}</#if>
  */
 @CommandLine.Command(name = "introduce",mixinStandardHelpOptions = true)
 public class IntroductionCommand implements Runnable{

@@ -1,13 +1,10 @@
-package com.kotoaya.wusi;
+package ${basePackage};
 
-import com.kotoaya.wusi.subCommand.AnswerCommand;
-import com.kotoaya.wusi.subCommand.IntroductionCommand;
-import com.kotoaya.wusi.subCommand.SubjectCommand;
-import com.kotoaya.wusi.subCommand.TestCommand;
+import ${basePackage}.subCommand.AnswerCommand;
+import ${basePackage}.subCommand.IntroductionCommand;
+import ${basePackage}.subCommand.SubjectCommand;
+import ${basePackage}.subCommand.TestCommand;
 import picocli.CommandLine;
-
-import javax.security.auth.Subject;
-import java.io.*;
 
 @CommandLine.Command(name = "wusi",mixinStandardHelpOptions = true)
 public class WusiExecutor implements Runnable{

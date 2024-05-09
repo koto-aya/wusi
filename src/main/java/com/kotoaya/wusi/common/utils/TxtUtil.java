@@ -1,12 +1,14 @@
 package com.kotoaya.wusi.common.utils;
 
 import cn.hutool.core.io.resource.ClassPathResource;
+import cn.hutool.core.util.ArrayUtil;
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 public class TxtUtil {
